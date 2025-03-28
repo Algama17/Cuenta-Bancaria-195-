@@ -93,7 +93,7 @@ public class CuentaTest {
         cuenta.retirar(1500);
         cuenta.comisionMensual = 50;
         cuenta.extractoMensual();
-        assertEquals(-40, cuenta.saldo, 0.01);
+        assertEquals(-50.5, cuenta.saldo, 0.01);
         assertEquals(500, cuenta.getSobregiro(), 0.01);
     }
 }

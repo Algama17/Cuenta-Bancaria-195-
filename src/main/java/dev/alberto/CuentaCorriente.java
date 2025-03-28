@@ -35,4 +35,11 @@ public class CuentaCorriente extends Cuenta{
         }
         super.consignar(cantidad);
 }
+
+
+
+    @Override
+    public void extractoMensual() {
+        super.extractoMensual();
+    }
 }

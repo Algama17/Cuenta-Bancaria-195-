@@ -31,4 +31,14 @@ public class Cuenta {
             System.out.println("No tienes dinero suficiente.");
         }
     }
+
+    public void extractoMensual(){
+        saldo -= comisionMensual;
+        calcularInteresMensual();
+    }
+
+    protected void calcularInteresMensual() {
+        float interesmensual = saldo * (tasaAnual / 12 /100);
+        saldo += interesmensual;
+    }
 }
