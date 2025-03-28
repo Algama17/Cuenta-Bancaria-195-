@@ -41,4 +41,9 @@ public class Cuenta {
         float interesMensual = saldo * (tasaAnual / 12 /100);
         saldo += interesMensual;
     }
+
+
+    public String imprimir(){
+        return "Saldo: " + saldo + ", Consignaciones: " + numConsignaciones + ", Retiros: " + numRetiros + ", Tasa Anual: " + tasaAnual + ", Comisión Mensual: " + comisionMensual;
+    }
 }

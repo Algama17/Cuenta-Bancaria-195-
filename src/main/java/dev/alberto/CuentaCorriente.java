@@ -42,4 +42,9 @@ public class CuentaCorriente extends Cuenta{
     public void extractoMensual() {
         super.extractoMensual();
     }
+
+    @Override
+    public String imprimir() {
+        return "Cuenta Corriente - " + super.imprimir() + "sobregiro: " + sobregiro + ", Transacciones: " + (numConsignaciones + numRetiros);
+    }
 }
