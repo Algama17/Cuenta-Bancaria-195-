@@ -12,4 +12,14 @@ public class CuentaCorriente extends Cuenta{
     public float getSobregiro() {
         return sobregiro;
     }
+
+    @Override
+    public void retirar(float cantidad){
+        saldo -= cantidad;
+        if (saldo < 0){
+            sobregiro += Math.abs(saldo);
+            saldo = 0;
+        }
+        numRetiros++;
+    }
 }
