@@ -85,4 +85,15 @@ public class CuentaTest {
         assertEquals(0, cuenta.getSobregiro(),0.01);
         assertEquals(1, cuenta.numConsignaciones);
     }
+
+
+    @Test
+    public void testMensual(){
+        CuentaCorriente cuenta = new CuentaCorriente(1000, 12);
+        cuenta.retirar(1500);
+        cuenta.comisionMensual = 50;
+        cuenta.extractoMensual();
+        assertEquals(-40, cuenta.saldo, 0.01);
+        assertEquals(500, cuenta.getSobregiro(), 0.01);
+    }
 }
