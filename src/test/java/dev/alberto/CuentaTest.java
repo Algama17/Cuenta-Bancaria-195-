@@ -74,4 +74,15 @@ public class CuentaTest {
         assertEquals(1, cuenta.numRetiros);
     }
 
+
+
+    @Test
+    public void testConsignarConSobregiro(){
+        CuentaCorriente cuenta = new CuentaCorriente(1000, 5);
+        cuenta.retirar(1500);
+        cuenta.consignar(600);
+        assertEquals(100, cuenta.saldo, 0.01);
+        assertEquals(0, cuenta.getSobregiro(),0.01);
+        assertEquals(1, cuenta.numConsignaciones);
+    }
 }
