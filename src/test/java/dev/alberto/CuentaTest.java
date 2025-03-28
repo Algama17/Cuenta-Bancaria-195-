@@ -41,4 +41,14 @@ public class CuentaTest {
         assertEquals(1000, cuenta.saldo, 0.01);
         assertEquals(0, cuenta.numRetiros);
     }
+
+    @Test
+    public void testCuentaInactiva(){
+        CuentaAhorros cuenta = new CuentaAhorros(5000, 5);
+        cuenta.consignar(1000);
+        cuenta.retirar(500);
+        assertEquals(5000, cuenta.saldo, 0.01);
+        assertEquals(0, cuenta.numConsignaciones);
+        assertEquals(0, cuenta.numRetiros);
+    }
 }
