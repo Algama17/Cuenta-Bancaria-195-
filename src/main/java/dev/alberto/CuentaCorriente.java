@@ -22,4 +22,17 @@ public class CuentaCorriente extends Cuenta{
         }
         numRetiros++;
     }
+
+
+
+
+    @Override
+    public void consignar(float cantidad) {
+        if (sobregiro > 0 ){
+            float cubrirSobregiro = Math.min(cantidad, sobregiro);
+            sobregiro -= cubrirSobregiro;
+            cantidad -= cubrirSobregiro;
+        }
+        super.consignar(cantidad);
+}
 }
