@@ -21,4 +21,14 @@ public class Cuenta {
         saldo += cantidad;
         numConsignaciones++;
     }
+
+    public void retirar(float cantidad){
+        if (cantidad<= saldo){
+            saldo -= cantidad;
+            numRetiros++;
+        }
+        else {
+            System.out.println("No tienes dinero suficiente.");
+        }
+    }
 }
