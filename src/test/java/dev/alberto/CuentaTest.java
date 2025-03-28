@@ -16,4 +16,12 @@ public class CuentaTest {
         assertEquals(0, cuenta.numRetiros);
         assertEquals(0, cuenta.comisionMensual, 0.01);
     }
+
+    @Test
+    public void testConsignar(){
+        Cuenta cuenta = new Cuenta(1000, 5);
+        cuenta.consignar(500);
+        assertEquals(1500, cuenta.saldo, 0.01);
+        assertEquals(1, cuenta.numConsignaciones);
+    }
 }
