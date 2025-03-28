@@ -38,7 +38,7 @@ public class Cuenta {
     }
 
     protected void calcularInteresMensual() {
-        float interesmensual = saldo * (tasaAnual / 12 /100);
-        saldo += interesmensual;
+        float interesMensual = saldo * (tasaAnual / 12 /100);
+        saldo += interesMensual;
     }
 }
