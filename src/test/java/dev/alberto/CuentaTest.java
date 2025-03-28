@@ -1,6 +1,7 @@
 package dev.alberto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -95,5 +96,17 @@ public class CuentaTest {
         cuenta.extractoMensual();
         assertEquals(-50.5, cuenta.saldo, 0.01);
         assertEquals(500, cuenta.getSobregiro(), 0.01);
+    }
+
+
+    @Test
+    public void testImprimirCuenta(){
+        CuentaCorriente cuenta = new CuentaCorriente(1000, 5);
+        cuenta.retirar(1500);
+        cuenta.consignar(600);
+        String resultado = cuenta.imprimir();
+        assertTrue(resultado.contains(("Saldo: 100")));
+        assertTrue(resultado.contains("Sobregiro: 0"));
+        assertTrue(resultado.contains("Transacciones: 2"));
     }
 }
