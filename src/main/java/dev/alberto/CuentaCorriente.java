@@ -1,5 +1,6 @@
 package dev.alberto;
 
-public class CuentaCorriente {
+public class CuentaCorriente extends Cuenta{
+
 
 }
