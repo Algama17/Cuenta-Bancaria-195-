@@ -15,6 +15,7 @@ public class CuentaTest {
         assertEquals(0, cuenta.numConsignaciones);
         assertEquals(0, cuenta.numRetiros);
         assertEquals(0, cuenta.comisionMensual, 0.01);
+        assertEquals(0, cuenta.getSobregiro(), 0.01);
     }
 
     @Test
@@ -51,4 +52,6 @@ public class CuentaTest {
         assertEquals(0, cuenta.numConsignaciones);
         assertEquals(0, cuenta.numRetiros);
     }
+
+
 }
