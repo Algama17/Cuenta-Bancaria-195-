@@ -77,6 +77,15 @@ public class CuentaTest {
         assertTrue(cuenta.isActiva()); 
     }
 
+    @Test
+public void testImprimirCuentaAhorros() {
+    CuentaAhorros cuenta = new CuentaAhorros(15000, 5);
+    cuenta.consignar(1000);
+    cuenta.retirar(500);
+    String resultado = cuenta.imprimir();
+    assertTrue(resultado.contains("Saldo: 15500"));
+    assertTrue(resultado.contains("Transacciones: 2"));
+}
 
     @Test
     public void testRetirarConSobregiro(){
