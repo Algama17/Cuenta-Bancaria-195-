@@ -42,4 +42,9 @@ public class CuentaAhorros extends Cuenta {
     public boolean isActiva() {
         return activa;
     }
+
+    @Override
+    public String imprimir() {
+        return "Cuenta Ahorros - " + super.imprimir() + ", Comisión Mensual: " + comisionMensual + ", Transacciones: " + (numConsignaciones + numRetiros);
+    }
 }
