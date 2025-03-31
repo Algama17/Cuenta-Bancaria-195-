@@ -66,6 +66,18 @@ public class CuentaTest {
     }
 
 
+    @Test 
+    public void testExtrractoMensual(){
+        CuentaAhorros cuenta = new CuentaAhorros(15000, 5);
+        for (int i = 0; i < 6; i++) {
+            cuenta.retirar(1000);
+        }
+        cuenta.extractoMensual();
+        assertEquals(8000, cuenta.saldo, 0.01);
+        assertTrue(cuenta.activa);
+    }
+
+
     @Test
     public void testRetirarConSobregiro(){
         CuentaCorriente cuenta = new CuentaCorriente(1000, 5);
