@@ -45,6 +45,6 @@ public class CuentaCorriente extends Cuenta{
 
     @Override
     public String imprimir() {
-        return "Cuenta Corriente - " + super.imprimir() + "sobregiro: " + sobregiro + ", Transacciones: " + (numConsignaciones + numRetiros);
+        return "Cuenta Corriente - " + super.imprimir() + "Sobregiro: " + sobregiro + ", Transacciones: " + (numConsignaciones + numRetiros);
     }
 }
